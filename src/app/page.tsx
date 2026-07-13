@@ -12,6 +12,8 @@ const MENU_DATA = [
     price: "$6.50",
     desc: "Single-origin Colombia beans with vibrant notes of strawberry milkshake and cream.",
     bgTheme: "bg-[#EAEFF4]",
+    image:
+      "https://images.unsplash.com/photo-1541167760496-1628856ab772?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y29mZmVlfGVufDB8fDB8fHwy",
   },
   {
     id: "02",
@@ -20,6 +22,8 @@ const MENU_DATA = [
     price: "$7.00",
     desc: "Rich double-shot decaf espresso with a velvety local wild-honey infusion.",
     bgTheme: "bg-[#F4EAEF]",
+    image:
+      "https://images.unsplash.com/photo-1559496417-e7f25cb247f3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGNvZmZlZXxlbnwwfHwwfHx8Mg%3D%3D",
   },
   {
     id: "03",
@@ -28,6 +32,8 @@ const MENU_DATA = [
     price: "$7.50",
     desc: "12-hour slow cold extraction topped with crisp, sparkling citrus tonic water.",
     bgTheme: "bg-[#EFF4EA]",
+    image:
+      "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGNvZmZlZXxlbnwwfHwwfHx8Mg%3D%3D",
   },
   {
     id: "04",
@@ -36,10 +42,13 @@ const MENU_DATA = [
     price: "$8.00",
     desc: "Concentrated decaf shot drowned over a scoop of artisanal vanilla bean ice cream.",
     bgTheme: "bg-[#F4F0EA]",
+    image:
+      "https://images.unsplash.com/photo-1502462041640-b3d7e50d0662?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGNvZmZlZXxlbnwwfHwwfHx8Mg%3D%3D",
   },
 ];
 
 // [INIT]: Mock dataset representing Instagram-curated aesthetic cafe ambience for desktop display
+// Sekarang dengan gambar latar untuk setiap card
 const AMBIENCE_DATA = [
   {
     id: "img-01",
@@ -47,6 +56,8 @@ const AMBIENCE_DATA = [
     gridClass: "md:col-start-2 md:row-start-1 md:col-span-1 md:row-span-1",
     bgClass: "bg-[#E6DFD7]",
     tag: "BAR DETAIL",
+    image:
+      "https://images.unsplash.com/photo-1556745753-b2904692b3cd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDF8MHxzZWFyY2h8OHx8Y29mZmVlfGVufDB8fDB8fHwy",
   },
   {
     id: "img-02",
@@ -54,6 +65,8 @@ const AMBIENCE_DATA = [
     gridClass: "md:col-start-3 md:row-start-1 md:col-span-1 md:row-span-2",
     bgClass: "bg-[#DFD5C6]",
     tag: "SPATIAL ARCHITECTURE",
+    image:
+      "https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y2FmZXxlbnwwfHwwfHx8Mg%3D%3D",
   },
   {
     id: "img-03",
@@ -61,6 +74,8 @@ const AMBIENCE_DATA = [
     gridClass: "md:col-start-1 md:row-start-2 md:col-span-2 md:row-span-1",
     bgClass: "bg-[#D5CBB9]",
     tag: "SLOW POUR RITUAL",
+    image:
+      "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y29mZmVlfGVufDB8fDB8fHwy",
   },
   {
     id: "img-04",
@@ -68,6 +83,8 @@ const AMBIENCE_DATA = [
     gridClass: "md:col-start-4 md:row-start-2 md:col-span-1 md:row-span-1",
     bgClass: "bg-[#EAE5DC]",
     tag: "CERAMIC CRAFT",
+    image:
+      "https://images.unsplash.com/photo-1521017432531-fbd92d768814?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGNvZmZlZSUyMGJlYW5zfGVufDB8fDB8fHwy",
   },
   {
     id: "img-05",
@@ -75,6 +92,8 @@ const AMBIENCE_DATA = [
     gridClass: "md:col-start-2 md:row-start-3 md:col-span-2 md:row-span-1",
     bgClass: "bg-[#DCD4C7]",
     tag: "COMMUNAL SPACE",
+    image:
+      "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGNhZmV8ZW58MHx8MHx8fDI%3D",
   },
 ];
 
@@ -162,8 +181,8 @@ export default function Home() {
                   The Curated Menu
                 </h2>
                 <p className="font-body text-xs text-brand-black/60">
-                  Select a signature blend on the left to review its flavor matrix
-                  window.
+                  Select a signature blend on the left to review its flavor
+                  matrix window.
                 </p>
               </div>
 
@@ -189,10 +208,13 @@ export default function Home() {
                   <div
                     className={`flex-1 my-4 rounded-2xl ${activeItem.bgTheme} border border-brand-black/5 flex items-center justify-center relative overflow-hidden min-h-48`}
                   >
-                    <span className="font-heading text-5xl font-extrabold opacity-5 tracking-tighter uppercase select-none">
-                      D`CAF
-                    </span>
-                    <p className="absolute bottom-2.5 left-2.5 right-2.5 font-body text-xs text-brand-black/70 bg-white/95 backdrop-blur-md p-3 rounded-xl border border-white/40 leading-relaxed">
+                    <img
+                      src={activeItem.image}
+                      alt={activeItem.name}
+                      className="absolute inset-0 w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent" />
+                    <p className="absolute bottom-2.5 left-2.5 right-2.5 font-body text-xs text-white/95 bg-black/40 backdrop-blur-sm p-3 rounded-xl border border-white/20 leading-relaxed">
                       {activeItem.desc}
                     </p>
                   </div>
@@ -278,10 +300,13 @@ export default function Home() {
                     <div
                       className={`flex-1 my-4 rounded-2xl ${item.bgTheme} border border-brand-black/5 flex items-center justify-center relative overflow-hidden min-h-40`}
                     >
-                      <span className="font-heading text-5xl font-extrabold opacity-5 tracking-tighter uppercase select-none">
-                        D`CAF
-                      </span>
-                      <p className="absolute bottom-2.5 left-2.5 right-2.5 font-body text-xs text-brand-black/70 bg-white/95 backdrop-blur-md p-3 rounded-xl border border-white/40 leading-relaxed">
+                      <img
+                        src={item.image}
+                        alt={item.name}
+                        className="absolute inset-0 w-full h-full object-cover"
+                      />
+                      <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent" />
+                      <p className="absolute bottom-2.5 left-2.5 right-2.5 font-body text-xs text-white/95 bg-black/40 backdrop-blur-sm p-3 rounded-xl border border-white/20 leading-relaxed">
                         {item.desc}
                       </p>
                     </div>
@@ -331,8 +356,8 @@ export default function Home() {
                 cherries directly from family-owned micro-lots in Colombia at an
                 altitude of 1,800m ASL, then process them through a radical
                 86-hour Thermal Shock Fermentation method to naturally lock in a
-                vibrant strawberry milkshake aromatic profile. The final stage is
-                perfected using pure Swiss Water Decaffeination technology,
+                vibrant strawberry milkshake aromatic profile. The final stage
+                is perfected using pure Swiss Water Decaffeination technology,
                 extracting 99.9% of caffeine without degrading the essential
                 flavor oils inherent to the original green beans. A complex
                 narrative of taste, crafted exclusively for coffee connoisseurs
@@ -344,9 +369,8 @@ export default function Home() {
           </div>
 
           {/* [RENDER]: INTEGRATED ZONE 4: THE AMBIENCE GALLERY (DESKTOP EXCLUSIVE SYSTEM) */}
-          {/* [STYLE]: Hidden on mobile by default using `hidden`, smoothly active starting from `md:flex` viewports */}
           <div className="w-full px-6 md:px-12 py-16 md:py-24 bg-brand-cream/20 hidden md:flex flex-col items-center border-t border-brand-cream">
-            {/* Header Rows for Instagram Mock Connection Details */}
+            {/* Header Rows */}
             <div className="w-full max-w-4xl flex flex-col md:flex-row justify-between items-start md:items-end gap-4 mb-12">
               <div className="space-y-1">
                 <span className="font-utility text-[10px] font-bold text-brand-black/40 tracking-[0.15em] uppercase">
@@ -366,43 +390,44 @@ export default function Home() {
               </div>
             </div>
 
-            {/* [STYLE]: INTERLOCKING CLUSTER CANVAS ARRAY - Implements 4x3 Grid mapping exactly onto your sketch blueprint */}
+            {/* Grid Galeri dengan Gambar */}
             <div className="w-full max-w-4xl grid md:grid-cols-4 md:grid-rows-3 gap-5 md:h-145 relative items-center">
               {AMBIENCE_DATA.map((img) => (
                 <div
                   key={img.id}
-                  className={`group relative w-full h-full rounded-3xl ${img.bgClass} border border-brand-black/5 overflow-hidden flex flex-col justify-between p-6 transition-all duration-700 ease-out hover:shadow-[0_24px_48px_rgba(0,0,0,0.06)] hover:border-brand-black/10 hover:scale-[1.015] ${img.gridClass}`}
+                  className={`group relative w-full h-full rounded-3xl border border-brand-black/5 overflow-hidden flex flex-col justify-between p-6 transition-all duration-700 ease-out hover:shadow-[0_24px_48px_rgba(0,0,0,0.06)] hover:border-brand-black/10 hover:scale-[1.015] ${img.gridClass}`}
                 >
-                  {/* Micro-Aesthetic label overlays appearing sleekly on item hover triggers */}
-                  <div className="w-full flex justify-between items-start opacity-40 group-hover:opacity-100 transition-opacity duration-500">
-                    <span className="font-utility text-[9px] font-bold tracking-wider px-2 py-0.5 bg-brand-black/5 rounded text-brand-black/70">
+                  {/* Gambar Latar */}
+                  <img
+                    src={img.image}
+                    alt={img.tag}
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
+                  {/* Overlay gelap untuk keterbacaan teks */}
+                  <div className="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors duration-500" />
+
+                  {/* Konten di atas gambar */}
+                  <div className="relative z-10 w-full flex justify-between items-start opacity-40 group-hover:opacity-100 transition-opacity duration-500">
+                    <span className="font-utility text-[9px] font-bold tracking-wider px-2 py-0.5 bg-black/40 rounded text-white/90 backdrop-blur-sm">
                       {img.tag}
                     </span>
-                    <div className="w-1.5 h-1.5 rounded-full bg-brand-blue opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    <div className="w-1.5 h-1.5 rounded-full bg-white opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   </div>
 
-                  <div className="space-y-1.5">
-                    <span className="font-heading text-4xl font-black text-brand-black/5 tracking-tighter block group-hover:text-brand-blue/10 transition-colors duration-500 select-none">
-                      {img.id.toUpperCase()}
-                    </span>
-                    <p className="font-body text-xs text-brand-black/60 leading-relaxed transform translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 delay-75">
+                  <div className="relative z-10 space-y-1.5">
+                    <p className="font-body text-xs text-white/90 leading-relaxed transform translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 delay-75 drop-shadow-md">
                       {img.label}
                     </p>
                   </div>
-
-                  {/* Subtle abstract inner geometric background element simulating a frame depth view */}
-                  <div className="absolute inset-0 bg-linear-to-b from-transparent via-transparent to-brand-black/1 pointer-events-none group-hover:to-brand-black/3 transition-colors duration-500" />
                 </div>
               ))}
             </div>
           </div>
 
           {/* [RENDER]: INTEGRATED ZONE 5: OPENING HOURS & LOCATION */}
-          {/* [STYLE]: Layout blueprint mirroring user's sketch precisely with strict zero-touch on old code styling */}
           <div className="w-full px-6 md:px-12 py-12 border-t border-brand-cream bg-white">
-            {/* Main outer shell grid mimicking the blue background container frame from the blueprint */}
             <div className="w-full bg-brand-blue rounded-4xl p-6 md:p-8 grid grid-cols-1 md:grid-cols-5 gap-8 items-stretch">
-              {/* LEFT SIDE: STRICTLY TEXT ONLY (Directly on top of parent blue background, no inner card, no gradients) */}
+              {/* LEFT SIDE */}
               <div className="md:col-span-2 flex flex-col justify-between p-2 text-white">
                 <div className="space-y-8">
                   <div>
@@ -413,8 +438,6 @@ export default function Home() {
                       Hours & Spot
                     </h2>
                   </div>
-
-                  {/* Polished timetable structure using subtle semantic opacity separator dividers */}
                   <div className="space-y-4">
                     <div className="border-b border-white/10 pb-3">
                       <p className="font-heading text-sm text-white font-bold tracking-tight">
@@ -429,7 +452,6 @@ export default function Home() {
                         </p>
                       </div>
                     </div>
-
                     <div className="border-b border-white/10 pb-3">
                       <p className="font-heading text-sm text-white font-bold tracking-tight">
                         Weekends
@@ -444,8 +466,6 @@ export default function Home() {
                       </div>
                     </div>
                   </div>
-
-                  {/* Direct text display for cafe physical location */}
                   <div className="space-y-1">
                     <p className="font-heading text-xs text-white font-bold uppercase tracking-wider">
                       The Coffee Pavilion
@@ -457,20 +477,18 @@ export default function Home() {
                     </p>
                   </div>
                 </div>
-
-                {/* Bottom Holiday Info Text Notice Area */}
                 <div className="mt-8 pt-4 border-t border-dashed border-white/10">
                   <p className="font-body text-[11px] text-white/65 leading-relaxed">
                     <span className="font-bold text-brand-blue uppercase tracking-wider text-[9px] mr-1.5 px-1.5 py-0.5 bg-white rounded">
                       Notice
                     </span>
-                    Open on most public holidays. Please stay tuned to our social
-                    journal for temporary festive holiday adjustments.
+                    Open on most public holidays. Please stay tuned to our
+                    social journal for temporary festive holiday adjustments.
                   </p>
                 </div>
               </div>
 
-              {/* RIGHT SIDE: SOLID GOOGLE MAPS BLOCK CARD CONTAINER */}
+              {/* RIGHT SIDE: MAPS */}
               <div className="md:col-span-3 w-full min-h-75 md:min-h-100 bg-[#EAEFF4] rounded-3xl overflow-hidden relative group">
                 <iframe
                   src="https://maps.google.com/maps?q=Blok%20M%20Square&t=&z=15&ie=UTF8&iwloc=&output=embed"
@@ -485,7 +503,7 @@ export default function Home() {
         </div>
       </main>
 
-      {/* FOOTER – full width, outside main to avoid padding */}
+      {/* FOOTER */}
       <footer className="w-full bg-brand-blue text-white py-4 px-6 md:px-12 flex flex-col md:flex-row justify-between items-center gap-4">
         <p className="font-body text-xs font-medium">
           &copy; 2026 D`cafee Space. All rights reserved.
@@ -495,31 +513,21 @@ export default function Home() {
             Crafted with absolute intention
           </p>
           <div className="flex items-center gap-4">
-            {/* Instagram icon */}
             <a
               href="#"
               className="text-white hover:opacity-70 transition-opacity"
               aria-label="Instagram"
             >
-              <svg
-                className="w-4 h-4"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-              >
+              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
               </svg>
             </a>
-            {/* X (Twitter) icon */}
             <a
               href="#"
               className="text-white hover:opacity-70 transition-opacity"
               aria-label="X"
             >
-              <svg
-                className="w-4 h-4"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-              >
+              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
               </svg>
             </a>
