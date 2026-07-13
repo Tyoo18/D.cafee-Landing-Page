@@ -1,5 +1,6 @@
 "use client";
 
+// [INIT]: Import React core hooks for managing user interaction states
 import React, { useState } from "react";
 
 // [INIT]: Curated signature coffee dataset with precise display themes
@@ -49,7 +50,7 @@ export default function Home() {
   return (
     /* [STYLE]: Outer frame wrapper using absolute brand cream tint as viewport margins */
     <main className="min-h-screen w-full bg-[#F4EFEA] p-4 md:p-6 lg:p-8 flex flex-col selection:bg-[#2b56ff] selection:text-white">
-      {/* [STYLE]: THE MASTER UNIFIED SHELL CONTAINER - Expanded wide across the desktop viewport */}
+      {/* [STYLE]: THE MASTER UNIFIED SHELL CONTAINER */}
       <div className="w-full max-w-512 mx-auto bg-white rounded-4xl border border-black/5 overflow-hidden shadow-[0_4px_32px_rgba(0,0,0,0.015)] flex flex-col">
         {/* BRAND NAVIGATION BAR */}
         <nav className="w-full px-6 md:px-12 py-6 flex justify-between items-center border-b border-[#F4EFEA]">
@@ -115,9 +116,7 @@ export default function Home() {
 
         {/* INTEGRATED ZONE 2: THE CURATED MENU */}
         <div className="w-full px-6 md:px-12 py-12 md:py-16">
-          {/* [STYLE]: Outer content wrapper - Clamped on mobile, wide open on desktop for 4 cards */}
           <div className="max-w-4xl md:max-w-none mx-auto w-full flex flex-col gap-8">
-            {/* Component headers */}
             <div className="max-w-md">
               <h2 className="font-heading text-2xl md:text-3xl text-black tracking-tight mb-1">
                 The Curated Menu
@@ -128,9 +127,8 @@ export default function Home() {
               </p>
             </div>
 
-            {/* [RENDER]: MOBILE LAYOUT - Stacked view (Card on TOP, Pills on BOTTOM) */}
+            {/* MOBILE LAYOUT - Stacked view (Card on TOP, Pills on BOTTOM) */}
             <div className="flex flex-col gap-6 md:hidden">
-              {/* Dynamic Active Preview Card Panel */}
               <div
                 key={activeItem.id}
                 className="w-full max-w-100 mx-auto bg-[#F4EFEA]/30 p-4 border-2 border-blue-600/5 shadow-xs rounded-3xl flex flex-col justify-between min-h-120 animate-[fadeIn_0.35s_ease-in-out]"
@@ -148,7 +146,6 @@ export default function Home() {
                     </span>
                   </div>
                 </div>
-
                 <div
                   className={`flex-1 my-4 rounded-2xl ${activeItem.bgTheme} border border-black/5 flex items-center justify-center relative overflow-hidden min-h-48`}
                 >
@@ -159,7 +156,6 @@ export default function Home() {
                     {activeItem.desc}
                   </p>
                 </div>
-
                 <div className="flex justify-between items-center">
                   <div className="font-heading text-xl text-black font-bold tracking-tight">
                     {activeItem.price}
@@ -182,7 +178,6 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Bottom Navigational Pills Array */}
               <div className="flex flex-col gap-2.5 w-full max-w-100 mx-auto">
                 {MENU_DATA.map((item) => {
                   const isPillActive = item.id === activeId;
@@ -197,11 +192,7 @@ export default function Home() {
                       }`}
                     >
                       <div
-                        className={`w-9 h-9 rounded-full flex items-center justify-center font-utility text-xs font-bold shrink-0 ${
-                          isPillActive
-                            ? "bg-white text-[#2b56ff]"
-                            : "bg-black/5 text-black/60"
-                        }`}
+                        className={`w-9 h-9 rounded-full flex items-center justify-center font-utility text-xs font-bold shrink-0 ${isPillActive ? "bg-white text-[#2b56ff]" : "bg-black/5 text-black/60"}`}
                       >
                         {item.id}
                       </div>
@@ -216,14 +207,13 @@ export default function Home() {
               </div>
             </div>
 
-            {/* [RENDER]: DESKTOP LAYOUT - 4 Cards Grid Array Display (Pills eliminated total) */}
+            {/* DESKTOP LAYOUT - 4 Cards Grid Array Display */}
             <div className="hidden md:flex md:flex-row md:flex-wrap lg:flex-nowrap gap-6 justify-center w-full">
               {MENU_DATA.map((item) => (
                 <div
                   key={item.id}
                   className="w-100 h-120 bg-[#F4EFEA]/30 p-6 border-2 border-blue-600/5 shadow-xs rounded-3xl flex flex-col justify-between transition-transform hover:scale-[1.01]"
                 >
-                  {/* Card Meta Top Header */}
                   <div className="flex gap-4 items-center">
                     <div className="w-9 h-9 rounded-full bg-[#2b56ff] flex items-center justify-center font-utility text-xs font-bold text-white">
                       {item.id}
@@ -237,8 +227,6 @@ export default function Home() {
                       </span>
                     </div>
                   </div>
-
-                  {/* Graphic Display Panel Context */}
                   <div
                     className={`flex-1 my-4 rounded-2xl ${item.bgTheme} border border-black/5 flex items-center justify-center relative overflow-hidden min-h-40`}
                   >
@@ -249,8 +237,6 @@ export default function Home() {
                       {item.desc}
                     </p>
                   </div>
-
-                  {/* Pricing Matrix Frame */}
                   <div className="flex justify-between items-center">
                     <div className="font-heading text-xl text-black font-bold tracking-tight">
                       {item.price}
@@ -274,6 +260,44 @@ export default function Home() {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+
+        {/* ELEGANT STRUCTURAL DIVIDER SEPARATOR */}
+        <hr className="border-t border-[#F4EFEA] mx-6 md:mx-12" />
+
+        {/* [RENDER]: INTEGRATED ZONE 3: THE PROCESS EDITORIAL STORY (REFACTORED TO TEXT ONLY) */}
+        <div className="w-full px-6 md:px-12 py-16 md:py-24 bg-white flex flex-col items-center">
+          {/* [STYLE]: Centered Minimal Master Box Layout */}
+          <div className="w-full max-w-3xl text-center space-y-6 md:space-y-8">
+            {/* Small Subtle Title Header Overlays */}
+            <div className="space-y-1.5">
+              <span className="font-utility text-[10px] md:text-xs font-bold text-[#2b56ff] tracking-[0.2em] uppercase">
+                Our Craft Philosophy
+              </span>
+              <h2 className="font-heading text-2xl md:text-4xl text-black tracking-tight font-extrabold">
+                Behind the Beans
+              </h2>
+            </div>
+
+            {/* [FORMAT]: Formal Narrative Editorial Text Paragraph Block */}
+            <p className="font-body text-sm md:text-lg text-black/80 leading-relaxed md:leading-[1.85] text-justify md:text-center tracking-normal">
+              Every cup of D’cafee is born out of a profound dedication to
+              science and flavor. We meticulously source selected coffee
+              cherries directly from family-owned micro-lots in Colombia at an
+              altitude of 1,800m ASL, then process them through a radical
+              86-hour Thermal Shock Fermentation method to naturally lock in a
+              vibrant strawberry milkshake aromatic profile. The final stage is
+              perfected using pure Swiss Water Decaffeination technology,
+              extracting 99.9% of caffeine without degrading the essential
+              flavor oils inherent to the original green beans. A complex
+              narrative of taste, crafted exclusively for coffee connoisseurs
+              who demand premium quality with zero compromise on heart jitters
+              or sleep disruption.
+            </p>
+
+            {/* Small decorative minimalist anchor line */}
+            <div className="w-12 h-0.5 bg-[#2b56ff]/20 mx-auto pt-0.5 rounded-full" />
           </div>
         </div>
       </div>
